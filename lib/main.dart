@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           }
         },
         child: MaterialApp.router(
-          title: 'E-Commerce Minimal',
+          title: 'Simple ecommerce',
           debugShowCheckedModeBanner: false,
           theme: appTheme(context),
           routerConfig: router,
