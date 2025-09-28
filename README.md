@@ -1,16 +1,19 @@
-# xpanca_ecommerce
+# Simple E-Commerce
 
-A new Flutter project.
+**Stack:** Flutter 3.27, BLoC, Retrofit/Dio, GoRouter, GetIt, dartz & equatable, json_serializable, flutter_secure_storage.
 
-## Getting Started
+**Compatible With:** Mobile(Android), Desktop(Windows), and Web
 
-This project is a starting point for a Flutter application.
+## Quick start
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+flutter pub run build_runner build --delete-conflicting-outputs
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Edit host in `lib/main.dart` to match your Go backend.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Layers
+
+`datasource → repository → usecase → bloc → UI` with DI.
