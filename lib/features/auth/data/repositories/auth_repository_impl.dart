@@ -17,7 +17,6 @@ class AuthRepositoryImpl implements AuthRepository {
           await _datasource.loginWithUsernamePassword(username, password);
       return Right(auth.data!.toEntity());
     } catch (e) {
-      print(e);
       return Left(ServerFailure(message: e.toString(), statusCode: 500));
     }
   }

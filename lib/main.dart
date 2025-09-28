@@ -19,6 +19,7 @@ void main() async {
         : HydratedStorageDirectory((await getTemporaryDirectory()).path),
   );
 
+  //Please use https if you run on release mode
   await initDI('http://192.168.1.3:8080/api/v1');
 
   final authBloc = sl<AuthBloc>()..add(AuthCheckStatus());
