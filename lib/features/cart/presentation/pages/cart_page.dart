@@ -124,14 +124,16 @@ class _CartPageState extends State<CartPage> {
                 );
 
                 if (!isDesktop) {
-                  return Column(
-                    children: [
-                      Expanded(child: itemsList),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-                        child: summary,
-                      ),
-                    ],
+                  return SafeArea(
+                    child: Column(
+                      children: [
+                        Expanded(child: itemsList),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                          child: summary,
+                        ),
+                      ],
+                    ),
                   );
                 }
 
